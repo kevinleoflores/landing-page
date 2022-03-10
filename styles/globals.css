@@ -6,6 +6,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+:root {
+  --theme-accent: #9b27b0;
+  --theme-accent-darker: #8d24aa;
+  --secondary-btn: #d3d3d3;
+  --hover-secondary-btn: #a7a7a7;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +20,106 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* Header */
+.app-bar {
+  background-color: transparent;
+  position: fixed;
+  z-index: 10;
+}
+.app-bar.active {
+  background-color: var(--theme-accent);
+}
+.app-bar__btn {
+  background-color: var(--secondary-btn);
+}
+.app-bar__btn:hover {
+  background-color: var(--hover-secondary-btn);
+}
+
+/* Banner */
+.section-below-header {
+  position: relative;
+  line-height: 0%;
+}
+.section-below-header .filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #9c27b042;
+}
+.hero-banner__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  width: 100%;
+  padding: 0 5rem;
+}
+
+.hero-banner__btn {
+  margin-top: 32px;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-btn);
+  font-size: 1.1rem;
+}
+.hero-banner__btn:hover {
+  background-color: var(--hover-secondary-btn);
+}
+
+.hero-banner img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* Detail-Image */
+.detail-image {
+  display: flex;
+}
+.detail-text h1 {
+  margin: 40px 0;
+}
+.detail-text .desc {
+  margin: 40px 0;
+  line-height: 2rem;
+}
+.detail-img img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+/* Other */
+.with-divider {
+  border-right: 3px solid var(--theme-accent);
+}
+.vertical-divider {
+  height: 100%;
+  width: 3px;
+  background-color: var(--theme-accent);
+  margin: 0 8px;
+}
+
+.main-btn {
+  background-color: var(--theme-accent);
+  color: white;
+  margin: 0 8px;
+}
+.main-btn:hover {
+  background-color: var(--theme-accent-darker);
+}
+.secondary-btn {
+  border: 2px solid var(--theme-accent);
+  color: var(--theme-accent);
+  margin: 0 8px;
+}
+
+/* Client */
+.client-img img {
+  width: 150px;
+  height: auto;
 }
