@@ -9,7 +9,7 @@ body {
 :root {
   --theme-accent: #9b27b0;
   --theme-accent-darker: #8d24aa;
-  --secondary-btn: #d3d3d3;
+  --secondary-btn: #e1e1e1;
   --hover-secondary-btn: #a7a7a7;
 }
 
@@ -27,6 +27,7 @@ a {
   background-color: transparent;
   position: fixed;
   z-index: 10;
+  transition: 1s;
 }
 .app-bar.active {
   background-color: var(--theme-accent);
@@ -93,7 +94,34 @@ a {
   max-height: 600px;
 }
 
+/* Client */
+.client-img img {
+  width: 150px;
+  height: auto;
+}
+
+/* Certificate */
+.certificate .left {
+  width: 50%;
+}
+.certificate .right {
+  width: 60%;
+}
+.tags {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.certificate-img img {
+  height: 50px;
+  margin: 0 8px;
+}
+
 /* Other */
+section {
+  line-height: 0%;
+}
 .with-divider {
   border-right: 3px solid var(--theme-accent);
 }
@@ -116,10 +144,4 @@ a {
   border: 2px solid var(--theme-accent);
   color: var(--theme-accent);
   margin: 0 8px;
-}
-
-/* Client */
-.client-img img {
-  width: 150px;
-  height: auto;
 }

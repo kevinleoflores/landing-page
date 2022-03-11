@@ -17,7 +17,7 @@ const Banner = () => {
           </Box>
         </Box>
       </Box>
-      <Box className="filter"></Box>
+      {/* <Box className="filter"></Box> */}
 
       <Box className="hero-banner">
         <Box component="img" src="./assets/banner.jpg" />

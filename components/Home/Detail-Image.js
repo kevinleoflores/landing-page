@@ -2,7 +2,7 @@ import { Box, Typography, Button } from "@mui/material";
 
 const DetailImage = () => {
   return (
-    <Box className="detail-image">
+    <Box component="section" className="detail-image">
       <Box sx={{ flex: 1 }}>
         <Box sx={{ padding: "0 2rem" }} className="detail-text">
           <Typography component="h1" variant="h3">
@@ -18,7 +18,7 @@ const DetailImage = () => {
             and Ready-to-User platforms.
           </Typography>
         </Box>
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", lineHeight: "1.1rem" }}>
           <Box
             sx={{ flex: 1, display: "flex", justifyContent: "center" }}
             className="with-divider"
@@ -92,7 +92,7 @@ const DetailImage = () => {
         </Box>
       </Box>
       <Box sx={{ flex: 1 }} className="detail-img">
-        <Box component="img" src="./assets/section2.jpeg" />
+        <Box component="img" src="./assets/section2.jpg" />
       </Box>
     </Box>
   );

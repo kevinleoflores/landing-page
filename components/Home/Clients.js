@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 const Clients = () => {
   return (
-    <Box>
+    <Box component="section">
       <Box>
         <Typography
           component="h1"
