@@ -1,0 +1,23 @@
+.card {
+  margin-bottom: 24px;
+}
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card h1 {
+  font-size: 0.9rem;
+}
+
+.card p {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+.btn {
+  color: #9b27b0;
+  font-weight: 600;
+  margin-top: 8px;
+}

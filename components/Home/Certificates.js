@@ -3,8 +3,8 @@ import { Box, Typography } from "@mui/material";
 const Certificates = () => {
   return (
     <Box component="section" className="certificate">
-      <Box sx={{ display: "flex" }}>
-        <Box className="left" sx={{ padding: "0 2rem" }}>
+      <Box className="certificate-flex">
+        <Box className="left" sx={{ paddingRight: "2rem" }}>
           <Typography
             component="h1"
             variant="h3"
@@ -20,17 +20,17 @@ const Certificates = () => {
         </Box>
         <Box className="right">
           <Box sx={{ display: "flex", margin: "1.2rem 0" }}>
-            <Box className="tags secondary-btn">
+            <Box className="tags">
               <Typography sx={{ fontSize: "0.9rem", margin: "0 8px" }}>
                 Company Certification
               </Typography>
             </Box>
-            <Box className="tags secondary-btn">
+            <Box className="tags">
               <Typography sx={{ fontSize: "0.9rem", margin: "0 8px" }}>
                 Employee Certification
               </Typography>
             </Box>
-            <Box className="tags secondary-btn">
+            <Box className="tags">
               <Typography sx={{ fontSize: "0.9rem", margin: "0 8px" }}>
                 Company Affiliation
               </Typography>

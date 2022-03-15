@@ -30,6 +30,9 @@ const Header = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  const linkTo = (id) => {
+    window.location.replace(`/#${id}`);
+  };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -112,7 +115,7 @@ const Header = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => linkTo(page.toLowerCase())}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}

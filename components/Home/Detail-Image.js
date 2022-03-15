@@ -2,9 +2,14 @@ import { Box, Typography, Button } from "@mui/material";
 
 const DetailImage = () => {
   return (
-    <Box component="section" className="detail-image">
+    <Box
+      id="about us"
+      component="section"
+      className="detail-image"
+      sx={{ padding: "0" }}
+    >
       <Box sx={{ flex: 1 }}>
-        <Box sx={{ padding: "0 2rem" }} className="detail-text">
+        <Box className="detail-text">
           <Typography component="h1" variant="h3">
             Who are We
           </Typography>
