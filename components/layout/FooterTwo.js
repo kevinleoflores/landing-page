@@ -37,7 +37,7 @@ const FooterTwo = () => {
                   key={index}
                 >
                   <Box>{row.icon}</Box>
-                  <Box sx={{ marginLeft: "8px", width: "250px" }}>
+                  <Box sx={{ marginLeft: "8px" }}>
                     <Typography>{row.name}</Typography>
                   </Box>
                 </Box>

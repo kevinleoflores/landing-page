@@ -11,11 +11,19 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+
+import CustomModal from "../common/CustomModal";
 
 const pages = ["Solutions", "Articles", "About Us", "Careers"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [scrollPos, setScrollPos] = useState("0");
@@ -32,6 +40,7 @@ const Header = () => {
   };
   const linkTo = (id) => {
     window.location.replace(`/#${id}`);
+    handleClose();
   };
 
   const handleCloseUserMenu = () => {
@@ -73,7 +82,7 @@ const Header = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={handleOpen}
               color="inherit"
             >
               <MenuIcon />
@@ -97,7 +106,7 @@ const Header = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => linkTo(page.toLowerCase())}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -153,6 +162,15 @@ const Header = () => {
           </Box>
         </Toolbar>
       </Container>
+      <CustomModal open={open} handleClose={handleClose}>
+        <Box>
+          {pages.map((page) => (
+            <MenuItem key={page} onClick={() => linkTo(page.toLowerCase())}>
+              <Typography textAlign="center">{page}</Typography>
+            </MenuItem>
+          ))}
+        </Box>
+      </CustomModal>
     </AppBar>
   );
 };

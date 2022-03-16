@@ -190,6 +190,28 @@ a {
   margin: 0 8px;
 }
 
+@media only screen and (max-width: 820px) {
+  .certificate-flex {
+    flex-direction: column;
+  }
+  .certificate-img {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .certificate-img img {
+    margin-top: 16px;
+  }
+  .certificate .left {
+    width: 100%;
+  }
+  .certificate .left h1,
+  .certificate .left p {
+    text-align: center;
+  }
+  .certificate .right {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 768px) {
   .certificate-flex {
     flex-direction: column;
@@ -360,6 +382,7 @@ a {
 .articles-card {
   max-height: 500px;
   max-width: 300px;
+  margin: auto;
 }
 .articles-card img {
   width: 100%;
@@ -377,6 +400,8 @@ a {
 .footer-one {
   background-color: var(--theme-accent);
   padding: 40px 56px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .footer-one .menu {
   width: 25%;
@@ -392,6 +417,8 @@ a {
 
 .footer-two {
   padding: 0 56px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .company-info p {
@@ -421,6 +448,9 @@ a {
   .footer-two {
     padding: 0 16px;
   }
+  .footer-two .left h2 {
+    text-align: center;
+  }
   .footer-two__inner {
     flex-direction: column;
   }
@@ -428,6 +458,24 @@ a {
     width: 100%;
   }
   .footer-two__inner .right {
+    width: 100%;
+  }
+  .company-info {
+    justify-content: center;
+  }
+  .company-info p {
+    text-align: center;
+  }
+  .socmed-icons {
+    margin: auto;
+  }
+  .footer-two .right h5 {
+    text-align: center;
+  }
+  .footer-two .right p {
+    text-align: center;
+  }
+  .footer-two .right button {
     width: 100%;
   }
 }
