@@ -34,7 +34,7 @@ const Team = () => {
         <Box className="about-team__content">
           {data.map((row, index) => {
             return (
-              <Box className="about-team__card">
+              <Box className="about-team__card" key={index}>
                 <Box className="card-avatar">
                   <Box component="img" src={row.image} />
                 </Box>

@@ -586,6 +586,26 @@ section {
   }
 }
 
+.page-banner {
+  width: 80%;
+  margin: auto;
+  padding-top: 90px;
+  background-image: url("/assets/arrow.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  height: 480px;
+  position: relative;
+}
+.page-banner__title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.page-banner__title h1 {
+  margin-bottom: 56px;
+  font-weight: 900;
+}
+
 /* About Us */
 
 .about-banner {
@@ -728,4 +748,36 @@ section {
     width: 100%;
     margin-bottom: 32px;
   }
+}
+
+/* Articles */
+.article-post {
+  padding-top: 90px;
+}
+.article-post__title {
+  width: 60%;
+  margin: auto;
+}
+.article-post__title h1 {
+  margin-bottom: 56px;
+}
+.article-post__title .date-posted {
+  margin-bottom: 56px;
+}
+.article-post__banner {
+  width: 100%;
+  margin-bottom: 56px;
+}
+
+.article-post__banner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.article-post__content {
+  width: 60%;
+  margin: auto;
+}
+.article-post__content p {
+  margin-bottom: 32px;
 }
