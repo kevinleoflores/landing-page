@@ -41,6 +41,12 @@ a {
   background-color: var(--hover-secondary-btn);
 }
 
+.mega-menu {
+  max-width: calc(100vw - 17px)  !important;
+  width: 100vw;
+  left: 0 !important;
+}
+
 /* Banner */
 .section-below-header {
   position: relative;

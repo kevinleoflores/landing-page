@@ -14,13 +14,32 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-
+import { menu } from "../../utils/menu";
 import CustomModal from "../common/CustomModal";
 
 const pages = ["Solutions", "Articles", "About Us", "Careers"];
+
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
+  const [subMenu, setSubMenu] = useState([]);
+  const [selectedSubMenu, setSelectedSubMenu] = useState(null);
+  const [anchorElMenu, setAnchorElMenu] = useState(null);
+  const openMenu = Boolean(anchorElMenu);
+  const handleClickMenu = (event) => {
+    console.log(event.currentTarget.id);
+    setAnchorElMenu(event.currentTarget);
+    const newSub = menu.filter((row) => {
+      if (event.currentTarget.id === row.title.toLowerCase()) {
+        return row;
+      }
+    });
+    setSubMenu(newSub[0].sub_menu);
+    setSelectedSubMenu(newSub[0].sub_menu[0]);
+  };
+  const handleCloseMenu = () => {
+    setAnchorElMenu(null);
+  };
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -39,11 +58,15 @@ const Header = () => {
     setAnchorElUser(event.currentTarget);
   };
 
+  const subMenuHandler = (submenu) => {
+    setSelectedSubMenu(submenu);
+  };
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
   const linkTo = (id) => {
-    window.location.replace(`/#${id}`);
+    push(id);
     handleClose();
   };
 
@@ -136,16 +159,73 @@ const Header = () => {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {menu.map((page, index) => (
               <Button
-                key={page}
-                onClick={() => linkTo(page.toLowerCase())}
+                key={index}
+                id={page.title.toLowerCase()}
+                onClick={(event) => {
+                  page.link === "" ? handleClickMenu(event) : linkTo(page.link);
+                }}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page.title}
               </Button>
             ))}
           </Box>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorElMenu}
+            open={openMenu}
+            onClose={handleCloseMenu}
+            MenuListProps={{
+              "aria-labelledby": "basic-button",
+            }}
+            PopoverClasses={{ paper: "mega-menu" }}
+          >
+            <Box sx={{ display: "flex" }}>
+              <Box sx={{ width: "25%", padding: "0 24px" }}>
+                {subMenu.map((row, index) => {
+                  return (
+                    <MenuItem
+                      sx={{
+                        overflowWrap: "break-word",
+                        wordBreak: "break-word",
+                        whiteSpace: "unset",
+                      }}
+                      key={index}
+                      onClick={() => subMenuHandler(row)}
+                    >
+                      {row.title}
+                    </MenuItem>
+                  );
+                })}
+              </Box>
+              <Box sx={{ display: "flex", width: "60%" }}>
+                {selectedSubMenu !== null && (
+                  <>
+                    <Box sx={{ width: "60%" }}>
+                      <Typography
+                        sx={{ marginBottom: "32px" }}
+                        component="h1"
+                        variant="h5"
+                      >
+                        {selectedSubMenu.title}
+                      </Typography>
+                      <Typography>{selectedSubMenu.description}</Typography>
+                    </Box>
+                    <Box sx={{ width: "40%", padding: "0 24px" }}>
+                      <Typography
+                        sx={{ fontWeight: 600, marginBottom: "32px" }}
+                      >
+                        Goals
+                      </Typography>
+                      <Typography>{selectedSubMenu.goal}</Typography>
+                    </Box>
+                  </>
+                )}
+              </Box>
+            </Box>
+          </Menu>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
