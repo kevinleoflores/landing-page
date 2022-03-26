@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -24,9 +25,12 @@ const Header = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const { pathname, push } = useRouter();
+
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [scrollPos, setScrollPos] = useState("0");
+  const [headerBg, setHeaderBg] = useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -60,10 +64,20 @@ const Header = () => {
     };
   });
 
+  useEffect(() => {
+    if (pathname !== "/") {
+      setHeaderBg(true);
+    }
+
+    return () => {
+      setHeaderBg(false);
+    };
+  }, [pathname]);
+
   return (
     <AppBar
       position="static"
-      className={`app-bar ${scrollPos > 200 && "active"}`}
+      className={`app-bar ${headerBg ? "active" : scrollPos > 200 && "active"}`}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -72,6 +86,7 @@ const Header = () => {
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            onClick={() => push("/")}
           >
             LOGO
           </Typography>
@@ -134,7 +149,12 @@ const Header = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <Button className="app-bar__btn">Get in Touch</Button>
+              <Button
+                className="app-bar__btn"
+                onClick={() => push("/get-in-touch")}
+              >
+                Get in Touch
+              </Button>
               {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
             </Tooltip>
             <Menu

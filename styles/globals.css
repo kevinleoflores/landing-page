@@ -480,6 +480,49 @@ a {
   }
 }
 
+/* Get In Touch */
+
+.get-in-touch .left,
+.get-in-touch .right {
+  width: 50%;
+}
+.get-in-touch .right {
+  margin-top: 90px;
+}
+
+.get-in-touch .left img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.get-in-touch .right .half-width-desktop {
+  width: 50%;
+  margin: 0 16px 24px;
+}
+
+.get-in-touch .right .form-btn {
+  margin: 16px 0;
+  justify-content: flex-end;
+}
+.get-in-touch .right .full-width-desktop {
+  width: 100%;
+  margin: 0 16px 24px;
+}
+
+.get-in-touch .right .one-third-desktop {
+  width: 28%;
+  margin: 0 16px 24px;
+}
+@media only screen and (max-width: 768px) {
+  .get-in-touch .get-in-touch__inner {
+    flex-direction: column;
+  }
+  .get-in-touch .left,
+  .get-in-touch .right {
+    width: 100%;
+  }
+}
+
 /* Other */
 section {
   line-height: 0%;
@@ -525,6 +568,9 @@ section {
 .bg-1 {
   background-color: var(--theme-accent);
 }
+.bg-1 .text {
+  color: white;
+}
 .bg-2 {
   background-color: var(--theme-bg2);
 }
@@ -537,5 +583,149 @@ section {
 @media only screen and (max-width: 768px) {
   section {
     padding: 0 16px;
+  }
+}
+
+/* About Us */
+
+.about-banner {
+  width: 80%;
+  margin: auto;
+  padding-top: 90px;
+  background-image: url("/assets/arrow.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  height: 480px;
+  position: relative;
+}
+.about-banner__title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.about-banner__title h1 {
+  margin-bottom: 56px;
+  font-weight: 900;
+}
+.about-history .about-history__banner {
+  width: 80%;
+  margin: auto;
+}
+.about-history .about-history__banner img {
+  width: 100%;
+}
+.about-history .about-history__content .content-outer {
+  width: 80%;
+  margin: auto;
+}
+.about-history .about-history__content .content-inner {
+  width: 60%;
+  margin: 32px auto;
+  line-height: 28px;
+}
+.about-history .about-history__content h2 {
+  margin-bottom: 40px;
+}
+.about-history .about-history__content p {
+  line-height: 28px;
+  margin-bottom: 32px;
+}
+
+.about-history .about-history__content .about-office {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e1e4ea;
+}
+.about-history .about-history__content .about-office .about-office__image {
+  width: 50%;
+}
+.about-history .about-history__content .about-office .about-office__image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.about-history .about-history__content .about-office .about-office__text {
+  width: 50%;
+}
+.about-history
+  .about-history__content
+  .about-office
+  .about-office__text
+  .text-inner {
+  width: 80%;
+  margin: auto;
+}
+.about-team__inner {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+}
+.about-team__title {
+  margin-bottom: 32px;
+}
+.about-team__title h1 {
+  margin-bottom: 16px;
+}
+
+.about-team__content {
+  display: flex;
+  justify-content: space-between;
+}
+.about-team__card {
+  width: 23%;
+}
+.about-team__card .card-avatar img {
+  width: 100%;
+}
+.about-team__card .card-info {
+  width: 100%;
+  text-align: center;
+}
+
+.about-team__card .card-info .info-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-banner {
+    width: 95%;
+  }
+  .about-history .about-history__banner {
+    width: 100%;
+  }
+  .about-history .about-history__content .content-outer {
+    width: 100%;
+  }
+  .about-history .about-history__content .content-inner {
+    width: 90%;
+  }
+  .about-history .about-history__content .about-office {
+    flex-direction: column;
+  }
+  .about-history .about-history__content .about-office .about-office__image {
+    width: 100%;
+  }
+  .about-history .about-history__content .about-office .about-office__text {
+    width: 100%;
+  }
+  .about-history
+    .about-history__content
+    .about-office
+    .about-office__text
+    .text-inner {
+    padding-top: 16px;
+    width: 90%;
+  }
+  .about-team__inner {
+    width: 90%;
+  }
+  .about-team__content {
+    flex-wrap: wrap;
+  }
+  .about-team__card {
+    width: 100%;
+    margin-bottom: 32px;
   }
 }

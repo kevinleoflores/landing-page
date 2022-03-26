@@ -8,13 +8,22 @@ const SectionEight = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch("./mock_data/case.json");
-      const resp = await response.json();
-      setData(resp);
-      setCaseLength(resp.length);
+      try {
+        const response = await fetch("./mock_data/case.json");
+        const resp = await response.json();
+        setData(resp);
+        setCaseLength(resp.length);
+      } catch (err) {
+        console.log(err);
+      }
     };
     getData();
-  });
+
+    return () => {
+      setData([]);
+      setCaseLength(0);
+    };
+  }, []);
   return (
     <Box component="section" className="section8">
       <Box className="section8__inner" sx={{ display: "flex" }}>
