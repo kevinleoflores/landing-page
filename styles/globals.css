@@ -42,9 +42,15 @@ a {
 }
 
 .mega-menu {
-  max-width: calc(100vw - 17px)  !important;
+  /* max-width: calc(100vw - 17px) !important;
   width: 100vw;
   left: 0 !important;
+  padding: 56px 0; */
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  width: 100%;
+  color: black;
 }
 
 /* Banner */

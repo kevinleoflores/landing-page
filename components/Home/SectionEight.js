@@ -9,7 +9,7 @@ const SectionEight = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch("./mock_data/case.json");
+        const response = await fetch("/mock_data/case.json");
         const resp = await response.json();
         setData(resp);
         setCaseLength(resp.length);
