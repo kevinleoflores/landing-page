@@ -355,18 +355,18 @@ const Header = () => {
             </Menu>
           </Box>
         </Toolbar>
-        {anchorElMenu !== null && (
-          <MegaMenu
-            // anchorElMenu={anchorElMenu}
-            // openMenu={openMenu}
-            handleCloseMenu={handleCloseMenu}
-            selectedSubMenu={selectedSubMenu}
-            subMenu={subMenu}
-            subMenuHandler={subMenuHandler}
-            handleMenuCloseHover={handleMenuCloseHover}
-          />
-        )}
       </Container>
+      {anchorElMenu !== null && (
+        <MegaMenu
+          // anchorElMenu={anchorElMenu}
+          // openMenu={openMenu}
+          handleCloseMenu={handleCloseMenu}
+          selectedSubMenu={selectedSubMenu}
+          subMenu={subMenu}
+          subMenuHandler={subMenuHandler}
+          handleMenuCloseHover={handleMenuCloseHover}
+        />
+      )}
       <CustomModal open={open} handleClose={handleClose}>
         <Box>
           {pages.map((page) => (

@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import classes from "./style.module.css";
 
-const ImageText = () => {
+const ImageText = ({ title, description }) => {
   return (
     <Box className={classes["image-text-component"]}>
       <Box sx={{ display: "flex" }} className={classes.inner}>
@@ -11,17 +11,9 @@ const ImageText = () => {
         <Box className={classes.details}>
           <Box>
             <Typography component="h1" variant="h3">
-              What is Cloud Migration?
+              What is {title}?
             </Typography>
-            <Typography>
-              Yondu is a top IT solutions company wholly owned by Globe. It
-              helps enterprises scale in the new digital economy by providing
-              industry-standard, secure, and scalable solutions that create
-              happier technological experiences. Yondu’s top-notch technology
-              solutions include Custom Software Development, Managed IT
-              Services, Cloud Business Solutions, Messaging Gateways, Business
-              Productivity and Ready-to-Use Platforms.
-            </Typography>
+            <Typography>{description}</Typography>
           </Box>
         </Box>
       </Box>

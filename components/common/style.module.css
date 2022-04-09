@@ -46,11 +46,63 @@
 .why-choose .content {
   width: 70%;
   margin: auto;
+  flex-wrap: wrap;
 }
 .why-choose .content .content-item {
   padding: 0 24px;
+  width: 30%;
+  margin-bottom: 24px;
 }
 .why-choose .content .content-item .item-title {
   font-weight: 700;
   margin-bottom: 32px;
+}
+
+/* Our Process */
+.our-process {
+  margin: 56px 0;
+}
+
+.our-process .title {
+  text-align: left;
+  margin: 0 auto 32px;
+  width: 70%;
+}
+.our-process .title h1 {
+  margin-bottom: 32px;
+}
+.our-process .details {
+  /* align-items: center; */
+  margin: 0 auto 32px;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.our-process .leftImage {
+  order: 0;
+}
+.our-process .rightImage {
+  order: 1;
+  text-align: left;
+}
+.our-process .details .image {
+  width: 50%;
+}
+.our-process .details .image img {
+  width: 90%;
+  border-radius: 8px;
+}
+.our-process .details .text {
+  width: 50%;
+}
+
+.our-process .details .text.leftImage {
+  text-align: left;
+}
+.our-process .details .text.rightImage {
+  text-align: right;
+}
+
+.our-process .details .image.rightImage {
+  text-align: right;
 }

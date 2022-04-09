@@ -91,7 +91,9 @@ const MegaMenu = ({
                     {branch.map((row, index) => {
                       return (
                         <Box key={index}>
-                          <Button>{row.title}</Button>
+                          <Button onClick={() => linkTo(row.link)}>
+                            {row.title}
+                          </Button>
                         </Box>
                       );
                     })}

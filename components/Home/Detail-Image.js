@@ -1,4 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
+import { WHO_WE_ARE } from "../../utils/content";
 
 const DetailImage = () => {
   return (
@@ -13,15 +14,7 @@ const DetailImage = () => {
           <Typography component="h1" variant="h3">
             Who are We
           </Typography>
-          <Typography className="desc">
-            Yondu is a top IT solutions company wholly owned by Globe. It helps
-            enterprises scale in the digital economy by providing
-            industry-standard, secure, and scalable solutions that create
-            happier technological experiences. Yondu's top notch technology
-            solutions include Custom Software Development, Managed IT Services,
-            Cloud Business Solutions, Messaging Gateways, Business Productivity
-            and Ready-to-User platforms.
-          </Typography>
+          <Typography className="desc">{WHO_WE_ARE}</Typography>
         </Box>
         <Box sx={{ display: "flex", lineHeight: "1.1rem" }}>
           <Box

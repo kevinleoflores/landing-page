@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { COMPANY_CERT } from "../../utils/content";
 
 const Certificates = () => {
   return (
@@ -12,11 +13,7 @@ const Certificates = () => {
           >
             Company Certificates
           </Typography>
-          <Typography sx={{ marginTop: "40px" }}>
-            Our technologies and employees are certified by highly recoginzed
-            and leading organizations to ensure exceptional service and product
-            delivery.
-          </Typography>
+          <Typography sx={{ marginTop: "40px" }}>{COMPANY_CERT}</Typography>
         </Box>
         <Box className="right">
           <Box sx={{ display: "flex", margin: "1.2rem 0" }}>

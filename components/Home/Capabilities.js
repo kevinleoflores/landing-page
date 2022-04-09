@@ -1,4 +1,5 @@
 import { Avatar, Box, Typography } from "@mui/material";
+import { CAPA } from "../../utils/content";
 
 const Capabilities = () => {
   return (
@@ -23,14 +24,9 @@ const Capabilities = () => {
             variant="h3"
             sx={{ marginTop: "40px", marginBottom: "32px" }}
           >
-            The Yondu Equation
+            The Top Tier Equation
           </Typography>
-          <Typography>
-            We're driving innovation and digital transformation to take your
-            business to the next level. Our chemistry is made up of agility ,
-            dynamism, competence, allowing us to respond to your ever-changing
-            needs.
-          </Typography>
+          <Typography>{CAPA}</Typography>
         </Box>
       </Box>
       <Box className="capabilities-details">
@@ -41,9 +37,9 @@ const Capabilities = () => {
               Agile Team Dynamics
             </Typography>
             <Typography>
-              The team is composed of young and vibrant individuals, who are
-              continuously evolving and growing. We're always moving and
-              learning to keep up with the changing times.
+              Our team is composed of experts and professionals, who are
+              continuously expanding and growing. We always love learning new
+              things to keep up with the changing times.
             </Typography>
           </Box>
           <Box className="capabilities-item">
@@ -52,8 +48,9 @@ const Capabilities = () => {
               Integrated Connectivity
             </Typography>
             <Typography>
-              We want to ensure we're meeting your needs. Our team regularly
-              send updates to keep you in track and monitor developments.
+              We always ensure that we're meeting our client's needs. We
+              regularly send project updates to keep our clients updated and
+              monitor developments.
             </Typography>
           </Box>
           <Box className="capabilities-item">
@@ -62,8 +59,8 @@ const Capabilities = () => {
               24/7 Support
             </Typography>
             <Typography>
-              Our Support Team is always ready to help you with your concerns.
-              Feel free to contact us anytime via chat or call.
+              We have a team that is always prepared to help our clients with
+              their concerns. They can reach out to us anytime.
             </Typography>
           </Box>
           <Box className="capabilities-item">
@@ -72,8 +69,8 @@ const Capabilities = () => {
               Supports Multiple Technologies
             </Typography>
             <Typography>
-              Supporting wide array of industry-standard technologies to create
-              innovative business solutions.
+              Our services support comprehensive technologies to develop
+              thorough and innovative business solutions.
             </Typography>
           </Box>
           <Box className="capabilities-item">
@@ -82,8 +79,8 @@ const Capabilities = () => {
               Tailor-made Solutions
             </Typography>
             <Typography>
-              Understanding the organizations unique needs. The team develops
-              bespoke solutions to meet your requirements.
+              Our team develops solutions to meet our clients' specific
+              requirements based on their unique needs.
             </Typography>
           </Box>
           <Box className="capabilities-item">
@@ -92,9 +89,8 @@ const Capabilities = () => {
               Empowered Talents and Connections
             </Typography>
             <Typography>
-              We believe the our greatest asset is our people. We continuously
-              nourish their skills with various upskilling programs to empower
-              their personality and profession.
+              We continuously nourish our team to develop their skills and
+              empower them personally and professionally.
             </Typography>
           </Box>
         </Box>

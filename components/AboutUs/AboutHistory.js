@@ -12,16 +12,24 @@ const AboutHistory = () => {
               About Us
             </Typography>
             <Typography>
-              The top solutions in the Philippines that is Top Tier, was founded
-              year 2021 and only had a few employees under its name. Despite our
-              small numbers, the company had big dreams and even bigger passion
-              that ferried them across the start of the digital age both local
-              and international.
+              Top Tier Digital Solutions was functioning before with a small
+              team of friends working at a small apartment altogether who had
+              big dreams and an even bigger passion that pushed them to strive
+              harder in the digital world. In a few years, Top Tier grew and
+              paved the way for the formation of a digital agency that solves
+              many solutions for businesses adapting to the digital world. This
+              mission is the reason why Top Tier is continuously growing and
+              expanding, and building trust with our clients
             </Typography>
             <Typography>
-              Time goes by and the companies roster of expers grow. The
-              company's excellent track record became the reason why they had
-              been recognized by the country's digital community.
+              Top Tier Digital Solutions was before called ALM Services derived
+              from the initials of its founder, Mr. Angelo Lacson Marikit. ALM
+              Services offered services mainly on building an e-commerce store
+              and managing it, but our founder decided to expand the scope of
+              our services. He started building a company, building a larger
+              office, and hiring and nurturing new skilled employees. The name
+              Top Tier Digital Solutions was inspired by the leaders and the
+              team’s desire to be at the top when it comes to digital services.
             </Typography>
           </Box>
         </Box>
@@ -34,8 +42,7 @@ const AboutHistory = () => {
               <Typography>
                 Top Tier kept growing, both in numbers and expertise. This
                 inspires the company more to move forward and explore
-                innovations in the name of digitalization. It also became one of
-                the catalysts for one of the country's top tech companies.
+                innovations in the name of digitalization.
               </Typography>
             </Box>
           </Box>
@@ -43,22 +50,17 @@ const AboutHistory = () => {
         <Box className="content-outer">
           <Box className="content-inner">
             <Typography>
-              These developments were vital for the company apart from
-              capitalizing on the success reached in the past years and
-              exponential growth of the brand, it also occured around the time
-              that changes in the technological landscape, especially in terms
-              of business processes, were starting to take root.
-            </Typography>
-            <Typography>
-              As of today, we're one of the top IT players in the Philippines,
-              promoting a digitally-savvy-society and delivering solutions no
-              matter how difficult the challenges we will overcome. With our
-              team all dedicated to helping the company's wide variety of
-              clients across different fields, we're certainly stronger than
-              ever.
+              These developments were vital for the company. Aside from the
+              success reached in the past and the growth of the brand, the
+              changes in the technological landscape had a great impact on
+              having a great work performance and delivering better services.
+              Now, we're one of the best companies offering digital services in
+              the Philippines, promoting a friendly but professional community
+              and delivering solutions no matter how difficult the challenges we
+              have to overcome.
             </Typography>
             <Typography sx={{ fontWeight: 600 }}>
-              We Just Keeping Making History.
+              HOOORAAAAHHH!!
             </Typography>
           </Box>
         </Box>

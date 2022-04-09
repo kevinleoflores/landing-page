@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { OUR_CLIENTS } from "../../utils/content";
 
 const Clients = () => {
   return (
@@ -12,8 +13,7 @@ const Clients = () => {
           Our Clients
         </Typography>
         <Typography sx={{ textAlign: "center", marginTop: "40px" }}>
-          We put our expertise to work to help businesses scale and become
-          future-ready.
+          {OUR_CLIENTS}
         </Typography>
       </Box>
       <Box
